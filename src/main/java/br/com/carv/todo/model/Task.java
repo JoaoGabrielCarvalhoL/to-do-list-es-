@@ -28,6 +28,19 @@ public class Task {
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
+    public Task() {
+
+    }
+
+    public Task(Long taskId, String taskTitle, String description,
+                LocalDateTime deadline, LocalDateTime createdAt) {
+        this.taskId = taskId;
+        this.taskTitle = taskTitle;
+        this.description = description;
+        this.deadline = deadline;
+        this.createdAt = createdAt;
+    }
+
     public Long getTaskId() {
         return taskId;
     }
